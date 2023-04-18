@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sx-monitor-demo-app
+  labels:
+    app: sx-monitor-demo-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sx-monitor-demo-app
+  template:
+    metadata:
+      labels:
+        app: sx-monitor-demo-app
+    spec:
+      containers:
+      - name: sx-monitor-demo-app
+        image: ghcr.io/jkleinlercher/sx-monitor-demo-app:1.0
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sx-monitor-demo-app-ingress
+spec:
+  rules:
+  - host: sx-monitor-demo-app-suxess-it-dev.apps.cluster1.mcp.pitagora.at
+    http:
+      paths:
+      - path: /site
+        pathType: Prefix
+        backend:
+          service:
+            name: sx-monitor-demo-app-service
+            port:
+              name: http
