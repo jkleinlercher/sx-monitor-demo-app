@@ -42,3 +42,19 @@ This application can also be deployed to a Kubernetes cluster using the included
     kubectl apply -f ingress.yaml
 
 This will create a Kubernetes deployment, service, and ingress for the application. You can then access the application by opening a web browser and navigating to the URL specified in the ingress.
+
+# locust load test
+
+## install locust
+
+    sudo apt install python3-pip
+    pip3 install locust
+
+## run locust
+
+    cd locust
+    ~/.local/bin/locust
+
+Number of users: 50
+Spawn rate: 10
+im Host "http://sx-monitor-demo-app-suxess-it-dev.apps.cluster1.mcp.pitagora.at" angeben.
