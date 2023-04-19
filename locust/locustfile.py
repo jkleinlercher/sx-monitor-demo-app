@@ -14,5 +14,5 @@ class SxMonitorDemoApp(HttpUser):
         self.client.get("/site/404")
 
     @task
-    def request_40s(self):
+    def request_10s(self):
         self.client.get(f"/site/delay?sleep=10")
