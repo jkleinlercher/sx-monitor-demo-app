@@ -53,8 +53,6 @@ This will create a Kubernetes deployment, service, and ingress for the applicati
 ## run locust
 
     cd locust
-    ~/.local/bin/locust
+    ~/.local/bin/locust -H http://sx-monitor-demo-app-suxess-it-dev.apps.cluster1.mcp.pitagora.at -r 1 -u 10 --headless
 
-Number of users: 50
-Spawn rate: 10
-im Host "http://sx-monitor-demo-app-suxess-it-dev.apps.cluster1.mcp.pitagora.at" angeben.
+This will run the test with 10 users with a ramp-up of 1 user per second.
