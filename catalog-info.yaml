@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sx-monitor-demo-app
+  description: suxess-it demo app for simulating different observability scenarios
+  tags:
+    - go
+    - observability
+    - demo
+spec:
+  type: service
+  lifecycle: production
+  owner: suxess-it
